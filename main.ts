@@ -1,7 +1,7 @@
-import fs from 'node:fs';
-import path from 'node:path';
+// How Many Tabs Do You Have Open?: one honest tab count, digits only, written to /output/entry.txt.
+import { mkdirSync, writeFileSync } from "node:fs";
 
-const entry = `1247`;
-const outDir = '/output';
-fs.mkdirSync(outDir, { recursive: true });
-fs.writeFileSync(path.join(outDir, 'entry.txt'), entry);
+// The tab count, digits only.
+const entry = "2048";
+mkdirSync("/output", { recursive: true });
+writeFileSync("/output/entry.txt", entry);
